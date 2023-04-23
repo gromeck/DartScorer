@@ -1,5 +1,21 @@
 # DartScorer
 Yet another application to manage the game of Steel Dart.
+The application is written in C++ on base of the following libraries:
+
+- PocoLib https://pocoproject.org/
+- FLTK https://www.fltk.org/
+- OpenCV https://opencv.org/
+- PortAudio http://www.portaudio.com/
+
+DartScorer supports
+
+- X01 with different options
+- a simple player management
+- audio caller voice
+- display during gameplay as you know it from TV
+
+
+# Building DartScorer
 
 To build DartScorer, install the following packages into your
 build environment:
