@@ -1,8 +1,10 @@
 # DartScorer
 Yet another application to manage the game of Steel Dart.
 
-Install missing packages
+To build DartScorer, install the following packages into your
+build environment:
 
+```
 apt -y install \
 	wget \
 	git \
@@ -23,9 +25,20 @@ apt -y install \
 	libopencv-highgui-dev \
 	libopencv-features2d-dev \
 	cheese
+```
 
-List available camera devices:
+After that, run the script ./build.sh
 
-v4l2-ctl --list-devices
+You can run DartScorer in the directory Software/src by issuing the command:
 
-NOTE: Use the HBV ones!
+```
+./DartScorer
+```
+
+or simple install DartScorer by issuing
+
+```
+sudo make install
+```
+
+In a free-desktop compatible environment DarScorer will appear in the category of Games.
