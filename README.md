@@ -12,7 +12,9 @@ DartScorer supports
 - X01 with different options
 - a simple player management
 - audio caller voice
+- score input via keyboard, or bluetooth number keypad
 - display during gameplay as you know it from TV
+- translated frontend (translaters for other languages than EN and DE are welcome)
 
 
 # Building DartScorer
