@@ -48,7 +48,7 @@ DartScorer_SOURCES=\
 		BoardWidget.cpp \
 		DartScorerGUI.cpp
 
-DartScorerGUI.cpp DartScorerGUI.h: DartScorerGUI.fl
+main.cpp DartScorerGUI.cpp DartScorerGUI.h: DartScorerGUI.fl
 	fluid -c DartScorerGUI.fl
 
 CLEANFILES =  DartScorerGUI.cpp DartScorerGUI.h
