@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=DartScorer
+Comment=DartScorer Application
+Icon=/usr/local/share/dartscorer/icon.svg
+Exec=/usr/local/bin/DartScorer
+Terminal=false
+Categories=Game

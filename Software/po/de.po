@@ -1,0 +1,529 @@
+# German translations for DartScorer package
+# German translation for DartScorer.
+# Copyright (C) 2023 THE DartScorer'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the DartScorer package.
+# Christian Lorenz <gromeck@gromeck.de>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: DartScorer 0.1\n"
+"Report-Msgid-Bugs-To: dartscorer@gromeck.de\n"
+"POT-Creation-Date: 2023-03-23 07:39+0100\n"
+"PO-Revision-Date: 2023-03-16 22:03+0100\n"
+"Last-Translator: Christian Lorenz <gromeck@gromeck.de>\n"
+"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/DartScorerGUI.cpp:191
+msgid "ScoreInput"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:196
+msgid "Factor"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:198
+msgid "Single"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:207
+msgid "Double"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:215
+msgid "Tripple"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:225
+msgid "Numbers"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:227
+msgid "1"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:234
+msgid "2"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:241
+msgid "3"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:248
+msgid "4"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:255
+msgid "5"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:262
+msgid "6"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:269
+msgid "7"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:276
+msgid "8"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:283
+msgid "9"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:290
+msgid "10"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:297
+msgid "11"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:304
+msgid "12"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:311
+msgid "13"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:318
+msgid "14"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:326
+msgid "15"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:333
+msgid "16"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:341
+msgid "17"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:348
+msgid "18"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:355
+msgid "19"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:362
+msgid "20"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:372
+msgid "Modifiers"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:374
+msgid "Back"
+msgstr "Zurück"
+
+#: src/DartScorerGUI.cpp:384 src/DartScorerGUI.cpp:55251
+msgid "Bull"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:393
+msgid "0"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:466 src/DartScorerGUI.cpp:502
+#: src/DartScorerGUI.cpp:566 src/DartScorerGUI.cpp:54752
+msgid "DartBoard"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:470
+msgid "Canvas"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:482
+msgid "Darts"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:507
+msgid "Manage Players"
+msgstr "Spieler verwalten"
+
+#: src/DartScorerGUI.cpp:525
+msgid "&New Player"
+msgstr "&Neuer Spieler"
+
+#: src/DartScorerGUI.cpp:532
+msgid "&Edit Player"
+msgstr "&Ändere Spieler"
+
+#: src/DartScorerGUI.cpp:539
+msgid "&Delete Player"
+msgstr "&Lösche Spieler"
+
+#: src/DartScorerGUI.cpp:550
+msgid "&Close"
+msgstr "&Schließen"
+
+#: src/DartScorerGUI.cpp:572
+msgid "Player Name:"
+msgstr "Spielername:"
+
+#: src/DartScorerGUI.cpp:584
+msgid "OK"
+msgstr "OK"
+
+#: src/DartScorerGUI.cpp:591 src/DartScorerGUI.cpp:55090
+msgid "&Cancel"
+msgstr "&Abbruch"
+
+#: src/DartScorerGUI.cpp:54768
+msgid "Welcome to"
+msgstr "Willkommen zu"
+
+#: src/DartScorerGUI.cpp:54780
+msgid "&Info"
+msgstr "&Info"
+
+#: src/DartScorerGUI.cpp:54787
+msgid "&Statistics"
+msgstr "&Statistiken"
+
+#: src/DartScorerGUI.cpp:54805
+msgid "E&xit"
+msgstr "&Beenden"
+
+#: src/DartScorerGUI.cpp:54812
+msgid "&Play"
+msgstr "S&pielen"
+
+#: src/DartScorerGUI.cpp:54823 src/DartScorerGUI.cpp:54831
+msgid "Choose Players"
+msgstr "Wähle Spieler"
+
+#: src/DartScorerGUI.cpp:54838
+msgid "All Players"
+msgstr "Alle Spieler"
+
+#: src/DartScorerGUI.cpp:54847
+msgid "Selected Players"
+msgstr "Ausgewählte Spieler"
+
+#: src/DartScorerGUI.cpp:54856
+msgid "@>>"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:54863
+msgid "@<<"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:54870
+msgid "@2<-"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:54877
+msgid "@8<-"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:54888 src/DartScorerGUI.cpp:54948
+#: src/DartScorerGUI.cpp:55036 src/DartScorerGUI.cpp:55341
+#: src/DartScorerGUI.cpp:55382 src/DartScorerGUI.cpp:55445
+msgid "&Back"
+msgstr "&Zurück"
+
+#: src/DartScorerGUI.cpp:54895
+msgid "&Manage Players"
+msgstr "&Verwalte Spieler"
+
+#: src/DartScorerGUI.cpp:54905 src/DartScorerGUI.cpp:54955
+msgid "&Next"
+msgstr "&Weiter"
+
+#: src/DartScorerGUI.cpp:54916 src/DartScorerGUI.cpp:54924
+msgid "Choose Game"
+msgstr "Wähle Spiel"
+
+#: src/DartScorerGUI.cpp:54931
+msgid "Game"
+msgstr "Spiel"
+
+#: src/DartScorerGUI.cpp:54966 src/DartScorerGUI.cpp:54974
+#: src/DartScorerGUI.cpp:55233
+msgid "X01 Options"
+msgstr "X01-Optionen"
+
+#: src/DartScorerGUI.cpp:54981
+msgid "Points"
+msgstr "Punkte"
+
+#: src/DartScorerGUI.cpp:54991
+msgid "Double Out"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:54997
+msgid "Straight Out"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:55003
+msgid "Legs To Set"
+msgstr "Legs zu Satz"
+
+#: src/DartScorerGUI.cpp:55016
+msgid "Sets To Win"
+msgstr "Sätze zum Sieg"
+
+#: src/DartScorerGUI.cpp:55043
+msgid "Ok, &Game On"
+msgstr "Ok, los &geht's"
+
+#: src/DartScorerGUI.cpp:55054
+#, fuzzy
+#| msgid "Game On!"
+msgid "Game On"
+msgstr "Los geht's!"
+
+#: src/DartScorerGUI.cpp:55064
+#, fuzzy
+#| msgid "Game Mode"
+msgid "Game Title"
+msgstr "Spielmodus"
+
+#: src/DartScorerGUI.cpp:55076
+msgid "Game Mode"
+msgstr "Spielmodus"
+
+#: src/DartScorerGUI.cpp:55098
+msgid "&Exit"
+msgstr "&Beenden"
+
+#: src/DartScorerGUI.cpp:55105
+msgid "&Restart"
+msgstr "&Neustart"
+
+#: src/DartScorerGUI.cpp:55167
+msgid "Really cancel this game?"
+msgstr "Spiel tatsächlich beenden?"
+
+#: src/DartScorerGUI.cpp:55178 src/DartScorerGUI.cpp:55215
+msgid "&No"
+msgstr "&Nein"
+
+#: src/DartScorerGUI.cpp:55185 src/DartScorerGUI.cpp:55222
+msgid "&Yes"
+msgstr "&Ja"
+
+#: src/DartScorerGUI.cpp:55204
+msgid "Really quit DartScorer?"
+msgstr "DartScorer tatsächlich beenden?"
+
+#: src/DartScorerGUI.cpp:55240
+msgid "Options"
+msgstr "Optionen"
+
+#: src/DartScorerGUI.cpp:55247
+msgid "Display Bull as:"
+msgstr "Zeige Bull als:"
+
+#: src/DartScorerGUI.cpp:55252
+msgid ""
+"Bull will be displayed as \"Bull\", Bulls Eye will be displayed as \"DBull\"."
+msgstr ""
+"Bull wird angezeigt als \"Bull\", Bulls Eye wird angezeigt als \"DBull\"."
+
+#: src/DartScorerGUI.cpp:55258
+msgid "25"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:55259
+msgid ""
+"Bull will be displayed as \"25\", Bulls Eye will be displayed as \"D25\"."
+msgstr "Bull wird angezeigt als \"25\", Bulls Eye wird angezeigt als \"D25\"."
+
+#: src/DartScorerGUI.cpp:55267
+msgid "Keypad Layout:"
+msgstr "Tastenblock-Layout:"
+
+#: src/DartScorerGUI.cpp:55271
+msgid "PC like"
+msgstr "PC"
+
+#: src/DartScorerGUI.cpp:55272
+msgid ""
+"Keypad is organized the \"normal way\" on the PC where the top row is 7 to 9."
+msgstr ""
+"Der Zehnerblock hat \"normales\" PC-Layout, d.h. die obere Reihe ist 7 bis 9."
+
+#: src/DartScorerGUI.cpp:55280
+msgid "Phone like"
+msgstr "Telefon"
+
+#: src/DartScorerGUI.cpp:55281
+msgid ""
+"The keypad uses the layout similar to a phone where the top row is 1 to 3."
+msgstr "Der Zehnerblock hat Telefon-Layout, d.h. die obere Reihe ist 1 bis 3."
+
+#: src/DartScorerGUI.cpp:55291
+msgid "Input Mode:"
+msgstr "Eingabe-Modus:"
+
+#: src/DartScorerGUI.cpp:55295
+msgid "T..2..0"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:55296
+msgid ""
+"First type the factor (Dx or Tx) followed by the score value (0-20 or Bull). "
+"E.g. for Tripple 20 the sequence \"T-2-0\" is entered. If the last dart is 1 "
+"or 2 in a turn, you will have to close the input with an additional Sx."
+msgstr ""
+"Zuerst wir der Faktor (Dx oder Tx) gefolgt von dem Punktewert (0-20 oder "
+"Bull) eingegeben.Beispiel: für Tripple 20 wird die Sequenz \"T-2-0\" "
+"eigegeben.Wenn der letzte Punktwert einer Aufnahme 1 oder 2 ist, dann muss "
+"mit einem zuätzlichen Sx beendet werden"
+
+#: src/DartScorerGUI.cpp:55304
+msgid "2..0..T"
+msgstr ""
+
+#: src/DartScorerGUI.cpp:55305
+msgid ""
+"First type score value (0-20 or Bull) and end with the factor (Sx, Dx or "
+"Tx). E.g. for Tripple 20 the sequence \"2-0-T\" is entered."
+msgstr ""
+"Zuerst wir der Punktwert (0-20 oder Bull) gefolgt von dem Faktor (Sx, Dx "
+"oder Tx) eingegeben.Beispiel: für Tripple 20 wird die Sequenz \"2-0-T\" "
+"eigegeben."
+
+#: src/DartScorerGUI.cpp:55314
+#, fuzzy
+#| msgid "Display Column Titles:"
+msgid "Show Column Titles:"
+msgstr "Zeige Spaltentitel:"
+
+#: src/DartScorerGUI.cpp:55318
+msgid "Players"
+msgstr "Spieler"
+
+#: src/DartScorerGUI.cpp:55319
+msgid ""
+"Disabling this might make the player column narrow and allows the font size "
+"to scale a little bit up."
+msgstr ""
+"Wird der Spaltentitel abgeschaltet kann die Tabelle unter Umständen größer "
+"dargestellt werden."
+
+#: src/DartScorerGUI.cpp:55325
+#, fuzzy
+#| msgid "Points"
+msgid "Points left"
+msgstr "Punkte"
+
+#: src/DartScorerGUI.cpp:55326
+msgid ""
+"Disabling this makes this points column narrow and allows the font size to "
+"scale a little bit up."
+msgstr ""
+"Wird der Spaltentitel abgeschaltet kann die Tabelle unter Umständen größer "
+"dargestellt werden."
+
+#: src/DartScorerGUI.cpp:55352
+#, fuzzy
+#| msgid "&Info"
+msgid "Info"
+msgstr "&Info"
+
+#: src/DartScorerGUI.cpp:55393 src/DartScorerGUI.cpp:55401
+msgid "Statistics"
+msgstr "Statistiken"
+
+#: src/DartScorerGUI.cpp:55412
+msgid "Statistic:"
+msgstr "Statistik:"
+
+#: src/DartScorerGUI.cpp:55422
+msgid "Player A:"
+msgstr "Spieler A:"
+
+#: src/DartScorerGUI.cpp:55432
+msgid "Player B:"
+msgstr "Spieler B:"
+
+#: src/GameUI.cpp:131
+#, c-format
+msgid "Released under %s"
+msgstr "Veröffentlicht unter %s"
+
+#: src/GameUI.cpp:136
+msgid "This software is based on the following libraries:"
+msgstr "Diese Software basiert auf den folgenden Bibliotheken:"
+
+#: src/GameX01Widget.cpp:56
+msgid "LEGS FOR A SET"
+msgstr "LEGS ZUM SATZ"
+
+#: src/GameX01Widget.cpp:56
+msgid "SETS FOR THE GAME"
+msgstr "SÄTZE BIS SPIEL"
+
+#: src/GameX01Widget.cpp:58
+msgid "LEGS FOR THE GAME"
+msgstr "LEGS ZUM SPIEL"
+
+#: src/GameX01Widget.cpp:143
+msgid "Game on!"
+msgstr "Los geht's!"
+
+#: src/GameX01Widget.cpp:251
+#, c-format
+msgid "%s is busted!"
+msgstr "%s hat überworfen!"
+
+#: src/GameX01Widget.cpp:307
+#, c-format
+msgid "%s won the leg with %d darts!"
+msgstr "%s hat das Leg mit %d Darts gewonnen!"
+
+#: src/GameX01Widget.cpp:358
+#, c-format
+msgid "%s won the set!"
+msgstr "%s hat den Satz gewonnen!"
+
+#: src/GameX01Widget.cpp:386
+#, c-format
+msgid "%s won the game!"
+msgstr "%s hat das Spiel gewonnen!"
+
+#: src/GameX01Widget.h:177
+msgid "PLAYER"
+msgstr "Spieler"
+
+#: src/GameX01Widget.h:184
+msgid "SETS"
+msgstr ""
+
+#: src/GameX01Widget.h:191
+msgid "LEGS"
+msgstr ""
+
+#: src/GameX01Widget.h:198
+msgid "POINTS"
+msgstr "PUNKTE"
+
+#: src/PlayerManagementUI.cpp:120
+#, c-format
+msgid "Really delete player '%s'?"
+msgstr "Spieler '%s' wirklich löschen?"
+
+#: src/PlayerManagementUI.cpp:120
+msgid "Yes"
+msgstr "&Ja"
+
+#: src/PlayerManagementUI.cpp:120
+msgid "No"
+msgstr "&Nein"

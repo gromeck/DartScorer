@@ -1,0 +1,795 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0305
+i18n_type 1
+i18n_include <libintl.h>
+i18n_function gettext
+header_name {.h}
+code_name {.cpp}
+class ScoreInputGUI {open
+} {
+  Function {ScoreInputGUI()} {open
+  } {
+    code {//LOG_DEBUG("-");
+setFactor(1);} {}
+    Fl_Window window {
+      label ScoreInput
+      xywh {2863 250 270 330} type Double align 80 hide resizable hotspot size_range {270 330 560 680}
+    } {
+      Fl_Group {} {open
+        xywh {10 10 250 310} resizable
+      } {
+        Fl_Group {} {
+          label Factor open
+          xywh {10 10 250 50} labeltype NO_LABEL
+        } {
+          Fl_Button Single {
+            label Single
+            callback {setFactor(1);}
+            xywh {10 10 80 50} box BORDER_BOX shortcut 0x2f color 88 labelfont 1 labelsize 20 labelcolor 55
+          }
+          Fl_Button Double {
+            label Double
+            callback {setFactor(2);}
+            xywh {95 10 80 50} box BORDER_BOX shortcut 0x2a color 55 labelfont 1 labelsize 20
+          }
+          Fl_Button Tripple {
+            label Tripple
+            callback {setFactor(3);}
+            xywh {180 10 80 50} box BORDER_BOX shortcut 0x2d color 55 labelfont 1 labelsize 20
+          }
+        }
+        Fl_Group {} {
+          label Numbers open
+          xywh {10 65 250 200} labeltype NO_LABEL
+        } {
+          Fl_Button {} {
+            label 1
+            callback {setValue(1);}
+            xywh {10 65 50 50} box BORDER_BOX shortcut 0x31 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 2
+            callback {setValue(2);}
+            xywh {60 65 50 50} box BORDER_BOX shortcut 0x32 color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 3
+            callback {setValue(3);}
+            xywh {110 65 50 50} box BORDER_BOX shortcut 0x33 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 4
+            callback {setValue(4);}
+            xywh {160 65 50 50} box BORDER_BOX shortcut 0x34 color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 5
+            callback {setValue(5);}
+            xywh {210 65 50 50} box BORDER_BOX shortcut 0x35 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 6
+            callback {setValue(6);}
+            xywh {10 115 50 50} box BORDER_BOX shortcut 0x36 color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 7
+            callback {setValue(7);}
+            xywh {60 115 50 50} box BORDER_BOX shortcut 0x37 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 8
+            callback {setValue(8);}
+            xywh {110 115 50 50} box BORDER_BOX shortcut 0x38 color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 9
+            callback {setValue(9);}
+            xywh {160 115 50 50} box BORDER_BOX shortcut 0x39 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 10
+            callback {setValue(10);}
+            xywh {210 115 50 50} box BORDER_BOX shortcut 0x400030 color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 11
+            callback {setValue(11);}
+            xywh {10 165 50 50} box BORDER_BOX shortcut 0x400031 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 12
+            callback {setValue(12);}
+            xywh {60 165 50 50} box BORDER_BOX shortcut 0x400032 color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 13
+            callback {setValue(13);}
+            xywh {110 165 50 50} box BORDER_BOX shortcut 0x400033 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 14
+            callback {setValue(14);}
+            xywh {160 165 50 50} box BORDER_BOX shortcut 0x400034 color 55 selection_color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 15
+            callback {setValue(15);}
+            xywh {210 165 50 50} box BORDER_BOX shortcut 0x400035 color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 16
+            callback {setValue(16);}
+            xywh {10 215 50 50} box BORDER_BOX shortcut 0x400036 color 55 selection_color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 17
+            callback {setValue(17);}
+            xywh {60 215 50 50} box BORDER_BOX shortcut 0x400037 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 18
+            callback {setValue(18);}
+            xywh {110 215 50 50} box BORDER_BOX shortcut 0x400038 color 55 labelsize 36
+          }
+          Fl_Button {} {
+            label 19
+            callback {setValue(19);}
+            xywh {160 215 50 50} box BORDER_BOX shortcut 0x400039 color 7 labelsize 36
+          }
+          Fl_Button {} {
+            label 20
+            callback {setValue(20);}
+            xywh {210 215 50 50} box BORDER_BOX shortcut 0x2b color 55 labelfont 1 labelsize 36
+          }
+        }
+        Fl_Group {} {
+          label Modifiers open
+          xywh {10 270 250 50} labeltype NO_LABEL
+        } {
+          Fl_Button Back {
+            label Back
+            callback {setValue(-1);}
+            xywh {10 270 80 50} box BORDER_BOX shortcut 0x2c color 88 selection_color 57 labelfont 1 labelsize 30 labelcolor 55
+          }
+          Fl_Button Bull {
+            label Bull
+            callback {setValue(25);}
+            xywh {95 270 80 50} box BORDER_BOX shortcut 0xff8d color 62 selection_color 57 labelfont 1 labelsize 32
+          }
+          Fl_Button Zero {
+            label 0
+            callback {setValue(0);}
+            xywh {180 270 80 50} box BORDER_BOX shortcut 0x30 color 8 selection_color 57 labelfont 1 labelsize 32 labelcolor 55
+          }
+        }
+      }
+    }
+  }
+  decl {int factor = 1;} {private local
+  }
+  Function {setFactor(int factor)} {open private return_type void
+  } {
+    code {this->factor = factor;
+if (window) {
+	switch (factor) {
+		case 3:
+			Single->color(FL_WHITE);
+			Double->color(FL_WHITE);
+			Tripple->color(FL_RED);
+			Single->labelcolor(FL_BLACK);
+			Double->labelcolor(FL_BLACK);
+			Tripple->labelcolor(FL_WHITE);
+			Bull->deactivate();
+			break;
+		case 2:
+			Single->color(FL_WHITE);
+			Double->color(FL_RED);
+			Tripple->color(FL_WHITE);
+			Single->labelcolor(FL_BLACK);
+			Double->labelcolor(FL_WHITE);
+			Tripple->labelcolor(FL_BLACK);
+			Bull->activate();
+			break;
+		default:
+			Single->color(FL_RED);
+			Double->color(FL_WHITE);
+			Tripple->color(FL_WHITE);
+			Single->labelcolor(FL_WHITE);
+			Double->labelcolor(FL_BLACK);
+			Tripple->labelcolor(FL_BLACK);
+			Bull->activate();
+			
+	}
+	Single->redraw();
+	Double->redraw();
+	Tripple->redraw();
+	Bull->redraw();
+}
+//LOG_DEBUG("setFactor(%d) called",factor);} {}
+  }
+  Function {setValue(int val)} {open return_type void
+  } {
+    code {if (val < 0)
+  factor = 1;
+triggerPoints(factor,val);
+setFactor(1);} {}
+  }
+  Function {triggerPoints(int factor,int value)} {open return_type {virtual void}
+  } {
+    code {int points = factor * value;
+LOG_DEBUG("triggerPoints(%d,%d) called: points=%d",factor,value,points);} {selected
+    }
+  }
+}
+
+class BoardGUI {} {
+  Function {BoardGUI()} {open
+  } {
+    Fl_Window window {
+      label DartBoard open
+      xywh {3186 125 630 465} type Double align 80 hide resizable hotspot size_range {300 300 3000 3000}
+    } {
+      Fl_Box Board {
+        label Canvas
+        xywh {10 10 450 450} box THIN_DOWN_FRAME labeltype NO_LABEL resizable
+        code0 {\#include "BoardWidget.h"}
+        class BoardWidget
+      }
+      Fl_Group {} {
+        label Darts open
+        xywh {470 10 170 450} labeltype NO_LABEL align 5
+      } {
+        Fl_Output Dart1 {
+          xywh {470 10 150 150} box THIN_DOWN_BOX
+        }
+        Fl_Output Dart2 {
+          xywh {470 160 150 150} box THIN_DOWN_BOX
+        }
+        Fl_Output Dart3 {
+          xywh {470 310 150 150} box THIN_DOWN_BOX
+        }
+      }
+    }
+  }
+}
+
+class PlayerManagementGUI {open
+} {
+  Function {PlayerManagementGUI()} {open
+  } {
+    Fl_Window window {
+      label DartBoard open
+      xywh {927 94 900 710} type Double color 8 align 80 hide resizable hotspot modal size_range {900 710 3000 3000}
+    } {
+      Fl_Box {} {
+        label {Manage Players}
+        xywh {50 50 800 80} labelfont 1 labelsize 80 labelcolor 55 align 16
+      }
+      Fl_Browser List {
+        xywh {50 160 400 500} type Hold box THIN_DOWN_BOX color 55 labeltype NO_LABEL labelsize 24 textsize 50 resizable
+      }
+      Fl_Group Buttons {open
+        xywh {500 160 350 500} labeltype NO_LABEL align 5
+      } {
+        Fl_Button New {
+          label {&New Player}
+          xywh {500 160 350 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+        }
+        Fl_Button Edit {
+          label {&Edit Player}
+          xywh {500 260 350 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+        }
+        Fl_Button Delete {
+          label {&Delete Player}
+          xywh {500 360 350 80} box FLAT_BOX color 73 selection_color 81 labelsize 50 labelcolor 7
+        }
+        Fl_Box Spacer {
+          xywh {500 440 350 140} labeltype NO_LABEL resizable
+        }
+        Fl_Button Close {
+          label {&Close}
+          xywh {500 580 350 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 7
+        }
+      }
+    }
+  }
+}
+
+class PlayerManagementEditGUI {open
+} {
+  Function {PlayerManagementEditGUI()} {open
+  } {
+    Fl_Window window {
+      label DartBoard open
+      xywh {1217 195 530 350} type Double box THIN_UP_BOX color 8 align 80 hide hotspot modal size_range {530 350 530 350}
+    } {
+      Fl_Box {} {
+        label {Player Name:}
+        xywh {50 50 430 60} labelfont 1 labelsize 60 labelcolor 55 align 20
+      }
+      Fl_Input Name {
+        xywh {50 130 430 60} box FLAT_BOX color 55 labeltype NO_LABEL textsize 50
+      }
+      Fl_Return_Button OK {
+        label OK
+        xywh {50 220 200 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 7
+      }
+      Fl_Button Cancel {
+        label {&Cancel}
+        xywh {280 220 200 80} box FLAT_BOX shortcut 0xff1b color 73 selection_color 81 labelsize 50 labelcolor 7
+      }
+    }
+  }
+}
+
+class GameGUI {open
+} {
+  Function {GameGUI()} {open
+  } {
+    Fl_Window window {
+      label DartBoard open
+      xywh {107 56 1600 900} type Double color 30 labelsize 40 labelcolor 255 align 80 when 0 hide resizable hotspot size_range {1200 900 4000 3000}
+    } {
+      Fl_Wizard Wizard {open
+        xywh {0 0 1610 911} box NO_BOX color 8
+      } {
+        Fl_Group Welcome {
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+        } {
+          Fl_Group WelcomeSpacer {
+            xywh {50 50 1500 720} resizable
+          } {
+            Fl_Box WelcomeLogo {
+              label {Welcome to}
+              image {../images/logo/DartScorer-Logo-white-height=400px.png} xywh {100 135 1400 500} labelfont 1 labelsize 80 labelcolor 255 align 48 resizable
+            }
+          }
+          Fl_Group {} {open
+            xywh {50 770 1500 80}
+          } {
+            Fl_Button WelcomeInfo {
+              label {&Info}
+              xywh {50 770 160 80} box FLAT_BOX color 33 selection_color 31 labelsize 50 labelcolor 55
+            }
+            Fl_Button WelcomeStatistics {
+              label {&Statistics}
+              xywh {250 770 250 80} box FLAT_BOX color 33 selection_color 31 labelsize 50 labelcolor 55
+            }
+            Fl_Button WelcomeOptions {
+              image {../images/icons/gear-svgrepo-com-white-height=80.png} xywh {540 770 100 80} box FLAT_BOX color 33 selection_color 31 labelsize 50 labelcolor 55
+            }
+            Fl_Box {} {
+              xywh {640 770 470 80} resizable
+            }
+            Fl_Button WelcomeExit {
+              label {E&xit}
+              xywh {1110 770 200 80} box FLAT_BOX color 73 selection_color 81 labelsize 50 labelcolor 55
+            }
+            Fl_Button WelcomePlay {
+              label {&Play}
+              xywh {1350 770 200 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 55
+            }
+          }
+        }
+        Fl_Group ChoosePlayers {
+          label {Choose Players}
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
+          }
+          Fl_Box {} {
+            label {Choose Players}
+            xywh {50 50 1500 80} labelfont 1 labelsize 80 labelcolor 55 align 16
+          }
+          Fl_Group {} {
+            xywh {50 130 1500 640} resizable
+          } {
+            Fl_Browser PlayerListAll {
+              label {All Players}
+              xywh {250 250 400 400} type Multi box THIN_DOWN_BOX color 55 labelsize 50 labelcolor 55 align 5 textsize 50
+            }
+            Fl_Browser PlayerListSelected {
+              label {Selected Players}
+              xywh {950 250 400 400} type Multi box THIN_DOWN_BOX color 55 labelsize 50 labelcolor 55 align 9 textsize 50
+            }
+            Fl_Button ChoosePlayersIn {
+              label {@>>}
+              xywh {720 250 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+            Fl_Button ChoosePlayersOut {
+              label {@<<}
+              xywh {720 350 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+            Fl_Button ChoosePlayersUp {
+              label {@2<-}
+              xywh {720 450 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+            Fl_Button ChoosePlayersDown {
+              label {@8<-}
+              xywh {720 550 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+          }
+          Fl_Group {} {open
+            xywh {50 770 1500 80}
+          } {
+            Fl_Button ChoosePlayersBack {
+              label {&Back}
+              xywh {1190 770 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+            Fl_Button ChoosePlayersManage {
+              label {&Manage Players}
+              xywh {50 770 400 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+            Fl_Box ChoosePlayersSpacer {
+              xywh {450 770 740 80} resizable
+            }
+            Fl_Button ChoosePlayersNext {
+              label {&Next}
+              xywh {1390 770 160 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 55
+            }
+          }
+        }
+        Fl_Group ChooseGame {
+          label {Choose Game}
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
+          }
+          Fl_Box {} {
+            label {Choose Game}
+            xywh {50 50 1500 80} labelfont 1 labelsize 80 labelcolor 55 align 16
+          }
+          Fl_Group {} {open
+            xywh {50 130 1500 640} resizable
+          } {
+            Fl_Choice Game {
+              label Game
+              xywh {500 300 600 100} box THIN_UP_BOX down_box BORDER_BOX color 30 labelsize 50 labelcolor 55 align 5 textfont 1 textsize 60
+            } {}
+          }
+          Fl_Group {} {
+            xywh {50 770 1500 80}
+          } {
+            Fl_Box {} {
+              xywh {50 770 1140 80} resizable
+            }
+            Fl_Button ChooseGameBack {
+              label {&Back}
+              xywh {1190 770 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+            Fl_Button ChooseGameNext {
+              label {&Next}
+              xywh {1390 770 160 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 55
+            }
+          }
+        }
+        Fl_Group GameX01Options {
+          label {X01 Options} open
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
+          }
+          Fl_Box {} {
+            label {X01 Options}
+            xywh {50 50 1500 80} labelfont 1 labelsize 80 labelcolor 55 align 16
+          }
+          Fl_Group {} {open
+            xywh {50 130 1500 640} resizable
+          } {
+            Fl_Choice PointsToLeg {
+              label Points
+              xywh {500 300 600 100} box THIN_UP_BOX down_box BORDER_BOX color 30 labelsize 50 labelcolor 55 align 5 textfont 1 textsize 60
+            } {}
+            Fl_Round_Button DoubleOut {
+              label {Double Out}
+              xywh {500 440 280 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+            }
+            Fl_Round_Button StraightOut {
+              label {Straight Out}
+              xywh {820 440 280 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+            }
+            Fl_Counter LegsToSet {
+              label {Legs To Set}
+              xywh {500 600 280 100} type Simple color 33 selection_color 34 labelsize 50 labelcolor 55 align 5 minimum 2 maximum 20 step 1 value 2 textsize 60
+            }
+            Fl_Counter SetsToWin {
+              label {Sets To Win}
+              xywh {820 600 280 100} type Simple color 33 selection_color 34 labelsize 50 labelcolor 55 align 5 minimum 1 maximum 10 step 1 value 2 textsize 60
+            }
+          }
+          Fl_Group {} {open
+            xywh {50 770 1500 80}
+          } {
+            Fl_Box {} {
+              xywh {50 770 1000 80} resizable
+            }
+            Fl_Button GameX01OptionsBack {
+              label {&Back}
+              xywh {1050 770 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+            Fl_Button GameX01OptionsStart {
+              label {Ok, &Game On}
+              xywh {1250 770 300 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 55
+            }
+          }
+        }
+        Fl_Group GameOn {
+          label {Game On}
+          xywh {0 0 1605 905} box FLAT_BOX color 0 labeltype NO_LABEL hide
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 20 150 50} align 21
+          }
+          Fl_Group Header {open
+            xywh {0 0 1600 80}
+          } {
+            Fl_Output GameTitle {
+              label {Game Title}
+              xywh {150 10 400 70} box FLAT_BOX color 0 labeltype NO_LABEL labelfont 1 labelsize 60 labelcolor 55 align 21 textfont 1 textsize 60 textcolor 55
+            }
+            Fl_Output GameMode {
+              label {Game Mode}
+              xywh {550 10 630 70} type Multiline box FLAT_BOX color 0 labeltype NO_LABEL labelfont 1 labelsize 60 labelcolor 55 align 21 textfont 1 textsize 30 textcolor 55 resizable
+            }
+            Fl_Button GameOnCancel {
+              label {&Cancel}
+              xywh {1350 20 150 50} box FLAT_BOX shortcut 0xff1b color 30 selection_color 34 labelsize 32 labelcolor 55
+            }
+            Fl_Button GameOnExit {
+              label {&Exit}
+              xywh {1350 20 150 50} box FLAT_BOX color 30 selection_color 34 labelsize 32 labelcolor 55
+            }
+            Fl_Button GameOnRestart {
+              label {&Restart}
+              xywh {1180 20 150 50} box FLAT_BOX color 59 selection_color 60 labelsize 32 labelcolor 55
+            }
+            Fl_Button GameOnOptions {
+              image {../images/icons/gear-svgrepo-com-white-height=50.png} xywh {1520 20 60 50} box FLAT_BOX color 30 selection_color 31 labelsize 50 labelcolor 55
+            }
+          }
+          Fl_Group {} {open
+            xywh {0 80 1600 770} resizable
+          } {
+            Fl_Group GameArea {open
+              xywh {0 80 1600 770} color 30 resizable
+            } {}
+          }
+          Fl_Group Footer {open
+            xywh {0 850 1605 55}
+          } {
+            Fl_Box ScoreHistory {
+              xywh {0 850 1500 55} box FLAT_BOX color 32 labelsize 45 labelcolor 47 resizable
+              code0 {\#include "ScoreHistoryWidget.h"}
+              class ScoreHistoryWidget
+            }
+            Fl_Box ScoreInput {
+              xywh {1500 850 105 55} box FLAT_BOX color 55 labelsize 50
+              code0 {\#include "ScoreInputWidget.h"}
+              class ScoreInputWidget
+            }
+          }
+        }
+        Fl_Group GameCancel {
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
+          }
+          Fl_Box {} {
+            label {Really cancel this game?}
+            xywh {50 50 1520 720} labelfont 1 labelsize 80 labelcolor 55 align 16 resizable
+          }
+          Fl_Group {} {open
+            xywh {50 770 1520 80}
+          } {
+            Fl_Box {} {
+              xywh {50 770 1140 80} resizable
+            }
+            Fl_Button GameCancelNo {
+              label {&No}
+              xywh {1190 770 160 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 55
+            }
+            Fl_Button GameCancelYes {
+              label {&Yes}
+              xywh {1390 770 160 80} box FLAT_BOX color 73 selection_color 81 labelsize 50 labelcolor 55
+            }
+          }
+        }
+        Fl_Group GameQuit {
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
+          }
+          Fl_Box {} {
+            label {Really quit DartScorer?}
+            xywh {50 50 1520 720} labelfont 1 labelsize 80 labelcolor 55 align 16 resizable
+          }
+          Fl_Group {} {open
+            xywh {50 770 1520 80}
+          } {
+            Fl_Box {} {
+              xywh {50 770 1130 80} resizable
+            }
+            Fl_Button GameQuitNo {
+              label {&No}
+              xywh {1190 770 160 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 55
+            }
+            Fl_Button GameQuitYes {
+              label {&Yes}
+              xywh {1390 770 160 80} box FLAT_BOX color 73 selection_color 81 labelsize 50 labelcolor 55
+            }
+          }
+        }
+        Fl_Group Options {
+          label {X01 Options}
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
+          }
+          Fl_Box {} {
+            label Options
+            xywh {50 50 1500 80} labelfont 1 labelsize 80 labelcolor 55 align 16
+          }
+          Fl_Group {} {open
+            xywh {50 130 1500 650} resizable
+          } {
+            Fl_Group {} {
+              label {Display Bull as:} open
+              xywh {630 200 820 80} labelsize 50 labelcolor 55 align 4
+            } {
+              Fl_Round_Button OptionsShowBullAsBull {
+                label Bull
+                tooltip {Bull will be displayed as "Bull", Bulls Eye will be displayed as "DBull".} xywh {650 200 400 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+              }
+              Fl_Round_Button OptionsShowBullAs25 {
+                label 25
+                tooltip {Bull will be displayed as "25", Bulls Eye will be displayed as "D25".} xywh {1050 200 400 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+              }
+            }
+            Fl_Group {} {
+              label {Keypad Layout:} open
+              xywh {630 300 820 80} labelsize 50 labelcolor 55 align 4
+            } {
+              Fl_Round_Button OptionsKeypadLayoutPC {
+                label {PC like}
+                tooltip {Keypad is organized the "normal way" on the PC where the top row is 7 to 9.} image {../images/icons/keypad-sharp-svgrepo-com-pclike-height=90.png} xywh {650 300 400 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55 align 308
+              }
+              Fl_Round_Button OptionsKeypadLayoutPhone {
+                label {Phone like}
+                tooltip {The keypad uses the layout similar to a phone where the top row is 1 to 3.} image {../images/icons/keypad-sharp-svgrepo-com-phonelike-height=90.png} xywh {1050 300 400 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55 align 308
+              }
+            }
+            Fl_Group {} {
+              label {Input Mode:} open
+              xywh {630 400 820 80} labelsize 50 labelcolor 55 align 4
+            } {
+              Fl_Round_Button OptionsKeypadFactorPoints {
+                label {T..2..0}
+                tooltip {First type the factor (Dx or Tx) followed by the score value (0-20 or Bull). E.g. for Tripple 20 the sequence "T-2-0" is entered. If the last dart is 1 or 2 in a turn, you will have to close the input with an additional Sx.} xywh {650 400 400 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+              }
+              Fl_Round_Button OptionsKeypadPointsFactor {
+                label {2..0..T}
+                tooltip {First type score value (0-20 or Bull) and end with the factor (Sx, Dx or Tx). E.g. for Tripple 20 the sequence "2-0-T" is entered.} xywh {1050 400 400 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+              }
+            }
+            Fl_Group {} {
+              label {Show Column Titles:} open
+              xywh {630 500 820 80} labelsize 50 labelcolor 55 align 4
+            } {
+              Fl_Check_Button OptionsTableColumnTitlePlayers {
+                label Players
+                tooltip {Disabling this might make the player column narrow and allows the font size to scale a little bit up.} xywh {650 500 400 80} down_box DOWN_BOX labelsize 50 labelcolor 55
+              }
+              Fl_Check_Button OptionsTableColumnTitlePoints {
+                label {Points left}
+                tooltip {Disabling this makes this points column narrow and allows the font size to scale a little bit up.} xywh {1050 500 400 80} down_box DOWN_BOX labelsize 50 labelcolor 55
+              }
+            }
+            Fl_Group {} {
+              label {Caller Voice:} open
+              xywh {630 585 820 100} labelsize 50 labelcolor 55 align 4
+            } {
+              Fl_Choice OptionsCallerVoice {
+                xywh {650 610 600 60} box THIN_UP_BOX down_box BORDER_BOX color 30 labeltype NO_LABEL labelsize 50 labelcolor 55 align 5 textsize 50
+              } {}
+            }
+            Fl_Group {} {
+              label {Caller:} open
+              xywh {630 700 820 80} labelsize 50 labelcolor 55 align 4
+            } {
+              Fl_Round_Button OptionsCallerEachDart {
+                label {Each Dart}
+                tooltip {Bull will be displayed as "Bull", Bulls Eye will be displayed as "DBull".} xywh {650 700 400 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+              }
+              Fl_Round_Button OptionsCallerTurnTotal {
+                label {Turn Total}
+                tooltip {Bull will be displayed as "25", Bulls Eye will be displayed as "D25".} xywh {1050 700 400 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+              }
+            }
+          }
+          Fl_Group {} {open
+            xywh {50 770 1510 80}
+          } {
+            Fl_Box {} {
+              xywh {50 770 1340 80} resizable
+            }
+            Fl_Button OptionsBack {
+              label {&Back}
+              xywh {1390 770 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+          }
+        }
+        Fl_Group Info {
+          label Info open
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=100px.png} xywh {50 50 1500 80} labelfont 1 labelsize 80 labelcolor 55 align 24
+          }
+          Fl_Group {} {open
+            xywh {50 130 1500 640} resizable
+          } {
+            Fl_Output InfoText {
+              xywh {100 150 1450 700} type Multiline box NO_BOX color 30 labelsize 60 labelcolor 55 align 5 textsize 40 textcolor 55 resizable
+            }
+          }
+          Fl_Group {} {open
+            xywh {50 770 1510 80}
+          } {
+            Fl_Box {} {
+              xywh {50 770 1340 80} resizable
+            }
+            Fl_Button InfoBack {
+              label {&Back}
+              xywh {1390 770 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 50 labelcolor 55
+            }
+          }
+        }
+        Fl_Group GameStatistics {
+          label Statistics
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+        } {
+          Fl_Box {} {
+            image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
+          }
+          Fl_Box {} {
+            label Statistics
+            xywh {50 50 1500 80} labelfont 1 labelsize 80 labelcolor 55 align 16
+          }
+          Fl_Group StatisticsArea {open
+            xywh {50 150 1500 600} resizable
+          } {}
+          Fl_Group {} {open
+            xywh {50 770 1510 80}
+          } {
+            Fl_Choice StatisticsType {
+              label {Statistic:}
+              xywh {50 800 300 50} box THIN_UP_BOX down_box BORDER_BOX color 30 labelsize 30 labelcolor 55 align 5 textfont 1 textsize 40
+            } {}
+            Fl_Choice StatisticsPlayerA {
+              label {Player A:}
+              xywh {400 800 300 50} box THIN_UP_BOX down_box BORDER_BOX color 30 labelsize 30 labelcolor 221 align 5 textfont 1 textsize 40
+            } {}
+            Fl_Choice StatisticsPlayerB {
+              label {Player B:}
+              xywh {740 800 300 50} box THIN_UP_BOX down_box BORDER_BOX color 30 labelsize 30 labelcolor 131 align 5 textfont 1 textsize 40
+            } {}
+            Fl_Box {} {
+              xywh {1040 770 350 80} resizable
+            }
+            Fl_Button StatisticsBack {
+              label {&Back}
+              xywh {1390 770 160 80} box FLAT_BOX color 33 selection_color 34 labelsize 40 labelcolor 55
+            }
+          }
+        }
+      }
+    }
+  }
+}
