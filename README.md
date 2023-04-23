@@ -1,5 +1,12 @@
 # DartScorer
 Yet another application to manage the game of Steel Dart.
+
+<div style="float:left;">
+<img src="Resources/Screenshots/DartScorer-Screenshot-Welcome.png" height="450px">
+</div>
+
+&nbsp;
+
 The application is written in C++ on base of the following libraries:
 
 - PocoLib https://pocoproject.org/
@@ -7,15 +14,15 @@ The application is written in C++ on base of the following libraries:
 - OpenCV https://opencv.org/
 - PortAudio http://www.portaudio.com/
 
-DartScorer supports
+DartScorer supports:
 
-- X01 with different options
+- X01 with different options (set/leg based, double/straight 
 - a simple player management
-- audio caller voice
-- score input via keyboard, or bluetooth number keypad
+- audio caller voice (different audio packages available)
+- score input via keyboard, or bluetooth number keypad with unlimited undo
 - display during gameplay as you know it from TV
 - translated frontend (translaters for other languages than EN and DE are welcome)
-
+- simple statistics (average, high scores & finishes, ...)
 
 # Building DartScorer
 
@@ -60,3 +67,26 @@ sudo make install
 ```
 
 In a free-desktop compatible environment DarScorer will appear in the category of Games.
+
+
+# Some more Screenshots
+
+<div style="float:left;">
+<img src="Resources/Screenshots/DartScorer-Screenshot-ChoosePlayers.png" height="450px">
+</div>
+
+<div style="float:left;">
+<img src="Resources/Screenshots/DartScorer-Screenshot-Options.png" height="450px">
+</div>
+
+<div style="float:left;">
+<img src="Resources/Screenshots/DartScorer-Screenshot-ChoosePlayers.png" height="450px">
+</div>
+
+<div style="float:left;">
+<img src="Resources/Screenshots/DartScorer-Screenshot-Game-X01-Options.png" height="450px">
+</div>
+
+<div style="float:left;">
+<img src="Resources/Screenshots/DartScorer-Screenshot-Game-X01-Play.png" height="450px">
+</div>
