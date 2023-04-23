@@ -1,6 +1,12 @@
 # DartScorer
 Yet another application to manage the game of Steel Dart.
 
+<div style="float:left;">
+<img src="Resources/Screenshots/DartScorer-Screenshot-Welcome.png" height="450px">
+</div>
+
+&nbsp;
+
 The application is written in C++ on base of the following libraries:
 
 - PocoLib https://pocoproject.org/
@@ -17,12 +23,6 @@ DartScorer supports:
 - display during gameplay as you know it from TV
 - translated frontend (translaters for other languages than EN and DE are welcome)
 - simple statistics (average, high scores & finishes, ...)
-
-
-<div style="float:left;">
-<img src="Resources/Screenshots/DartScorer-Screenshot-Welcome.png" height="450px">
-</div>
-
 
 # Building DartScorer
 
