@@ -1,5 +1,6 @@
 # DartScorer
 Yet another application to manage the game of Steel Dart.
+
 The application is written in C++ on base of the following libraries:
 
 - PocoLib https://pocoproject.org/
@@ -15,6 +16,11 @@ DartScorer supports
 - score input via keyboard, or bluetooth number keypad
 - display during gameplay as you know it from TV
 - translated frontend (translaters for other languages than EN and DE are welcome)
+
+
+<div style="float:left;">
+<img src="Ressources/Screenshots/DartScorer-Screenshot-Welcome.png" height="450px">
+</div>
 
 
 # Building DartScorer
@@ -60,3 +66,26 @@ sudo make install
 ```
 
 In a free-desktop compatible environment DarScorer will appear in the category of Games.
+
+
+# Some more Screenshots
+
+<div style="float:left;">
+<img src="Ressources/Screenshots/DartScorer-Screenshot-ChoosePlayers.png" height="450px">
+</div>
+
+<div style="float:left;">
+<img src="Ressources/Screenshots/DartScorer-Screenshot-Options.png" height="450px">
+</div>
+
+<div style="float:left;">
+<img src="Ressources/Screenshots/DartScorer-Screenshot-ChoosePlayers.png" height="450px">
+</div>
+
+<div style="float:left;">
+<img src="Ressources/Screenshots/DartScorer-Screenshot-Game-X01-Options.png" height="450px">
+</div>
+
+<div style="float:left;">
+<img src="Ressources/Screenshots/DartScorer-Screenshot-Game-X01-Play.png" height="450px">
+</div>
