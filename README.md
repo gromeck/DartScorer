@@ -16,10 +16,11 @@ The application is written in C++ on base of the following libraries:
 
 DartScorer supports:
 
-- X01 with different options (set/leg based, double/straight 
+- X01 with different options (set/leg based, double/straight out)
 - a simple player management
 - audio caller voice (different audio packages available)
-- score input via keyboard, or bluetooth number keypad with unlimited undo
+- score input via keyboard or bluetooth number keypad -- with unlimited undo
+- checkout proposals
 - display during gameplay as you know it from TV
 - translated frontend (translaters for other languages than EN and DE are welcome)
 - simple statistics (average, high scores & finishes, ...)
