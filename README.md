@@ -1,5 +1,5 @@
-# DartScorer
-Yet another application to manage the game of Steel Dart.
+# DartScorer :dart:
+Yet another application to manage the game of Steel Dart
 
 <div style="float:left;">
 <img src="Resources/Screenshots/DartScorer-Screenshot-Welcome.png" height="450px">
@@ -14,7 +14,7 @@ The application is written in C++ on base of the following libraries:
 - OpenCV https://opencv.org/
 - PortAudio http://www.portaudio.com/
 
-DartScorer supports:
+DartScorer :dart: supports:
 
 - X01 with different options (set/leg based, double/straight out)
 - a simple player management
@@ -25,9 +25,9 @@ DartScorer supports:
 - translated frontend (translaters for other languages than EN and DE are welcome)
 - simple statistics (average, high scores & finishes, ...)
 
-# Building DartScorer
+# Building DartScorer :dart:
 
-To build DartScorer, install the following packages into your
+To build DartScorer :dart:, install the following packages into your
 build environment:
 
 ```
@@ -55,13 +55,13 @@ apt -y install \
 
 After that, run the script ./build.sh
 
-You can run DartScorer in the directory Software/src by issuing the command:
+You can run DartScorer :dart: in the directory Software/src by issuing the command:
 
 ```
 ./DartScorer
 ```
 
-or simple install DartScorer by issuing
+or simple install DartScorer :dart: by issuing
 
 ```
 sudo make install
