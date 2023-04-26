@@ -4,6 +4,6 @@ Encoding=UTF-8
 Name=DartScorer
 Comment=DartScorer Application
 Icon=/usr/local/share/dartscorer/icon.svg
-Exec=/usr/local/bin/DartScorer
+Exec=/usr/local/bin/DartScorer --fullscreen
 Terminal=false
 Categories=Game
