@@ -35,10 +35,12 @@ class ScoreInputWidget : public Fl_Box
 		int value = -1;
 		std::string text;
 		bool error = false;
+		bool awaiting = false;
 
 		int handle(int event);
 
 		static void resetError(ScoreInputWidget *widget);
+		static void emitInput(ScoreInputWidget *widget);
 
 		static const int ScoreKeypad0 = 0;
 		static const int ScoreKeypad1 = 1;
@@ -76,6 +78,7 @@ class ScoreInputWidget : public Fl_Box
 
 		void clear(void);
 		void setError(void);
+		void setAwaiting(void);
 		void draw(void);
 };
 

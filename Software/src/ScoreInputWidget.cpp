@@ -254,9 +254,11 @@ void ScoreInputWidget::clear(void)
 	LOG_DEBUG("-");
 
 	this->error = false;
+	this->awaiting = false;
 	factor = Points::SingleFactor;
 	value = -1;
 	setText();
+	Fl::remove_timeout((Fl_Timeout_Handler) ScoreInputWidget::emitInput,this);
 }
 
 void ScoreInputWidget::setError(void)
@@ -265,7 +267,19 @@ void ScoreInputWidget::setError(void)
 
 	clear();
 	this->error = true;
+	this->text = "X";
 	Fl::add_timeout(3,(Fl_Timeout_Handler) ScoreInputWidget::resetError,this);
+	Fl::remove_timeout((Fl_Timeout_Handler) ScoreInputWidget::emitInput,this);
+}
+
+void ScoreInputWidget::setAwaiting(void)
+{
+	LOG_DEBUG("-");
+
+	this->awaiting = true;
+	this->text += '?';
+	if (value > 0)
+		Fl::add_timeout(2,(Fl_Timeout_Handler) ScoreInputWidget::emitInput,this);
 }
 
 void ScoreInputWidget::resetError(ScoreInputWidget *widget)
@@ -276,26 +290,35 @@ void ScoreInputWidget::resetError(ScoreInputWidget *widget)
 		widget->clear();
 }
 
+void ScoreInputWidget::emitInput(ScoreInputWidget *widget)
+{
+	LOG_DEBUG("-");
+
+	widget->scoreInput(ScoreKeypadSingle);	// force the emission of the input done so far
+}
+
 void ScoreInputWidget::setText(void)
 {
 	LOG_DEBUG("factor=%d  value=%d",factor,value);
 
-	if (_config->getConfigInt(ConfigKeys::OptionsKeypadPointsFactor,1)) {
-		// input method points/factor
-		if (value < 0)
-			text =  (error) ? "X" : "...";
-		else {
-			text = Points::toString(factor,value).c_str();
-			error = false;
+	if (!error) {
+		if (_config->getConfigInt(ConfigKeys::OptionsKeypadPointsFactor,1)) {
+			// input method points/factor
+			if (value < 0)
+				text =  "...";
+			else {
+				text = Points::toString(factor,value);
+				setAwaiting();
+			}
 		}
-	}
-	else {
-		// input method factor/points
-		if (error)
-			text =  "X";
 		else {
-			text = (factor == Points::SingleFactor && value < 0) ? "..." : Points::toString(factor,value).c_str();
-			error = false;
+			// input method factor/points
+			if (factor == Points::SingleFactor && value < 0)
+				text = "...";
+			else {
+				text = Points::toString(factor,value);
+				setAwaiting();
+			}
 		}
 	}
 	redraw();
@@ -309,7 +332,11 @@ void ScoreInputWidget::draw(void)
 
 	fl_font(labelfont(),labelsize());
 
-	fl_draw_box(FL_FLAT_BOX,x(),y(),w(),h(),error ? FL_RED : color());
+	fl_draw_box(FL_FLAT_BOX,x(),y(),w(),h(),error
+		? FL_RED
+		: awaiting
+			? FL_YELLOW
+			: color());
 
 	int tw = fl_width(this->text.c_str());
 	fl_color(labelcolor());
@@ -321,4 +348,6 @@ void ScoreInputWidget::draw(void)
 ScoreInputWidget::~ScoreInputWidget()
 {
 	LOG_DEBUG("-");
+	Fl::remove_timeout((Fl_Timeout_Handler) ScoreInputWidget::resetError,this);
+	Fl::remove_timeout((Fl_Timeout_Handler) ScoreInputWidget::emitInput,this);
 }/**/
