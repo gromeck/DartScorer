@@ -1,6 +1,7 @@
 # Which words are used for an audio caller?
 
 DartScorer will search for the following files in
+```/usr/local/share/dartscorer/voice/```
 
 
 ```
@@ -28,19 +29,17 @@ The exclamation mark ensures a better result in text to speech.
 
 # How to generate a voice?
 
-* Your voice
-
+## Your voice
 - Get a microphone & audacity and speak the words
-- cut the sounds into pieces and save the result in the named files.
+- cut the sounds into pieces and save the result in the named files
 
-* espeak.de
-* espeak.en
+## espeak.de / espeak.en
 
 - Install espeak
 - Run the script generate-espeak.sh
-- This will generate the german and english caller voice.
+- This will generate the german and english caller voices
 
 
-# Need more voices?
+# Need more voices? :dart: :loudspeaker:
 
 Visit https://github.com/gromeck/DartScorer-Voices
