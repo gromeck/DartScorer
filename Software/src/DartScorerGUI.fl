@@ -467,8 +467,8 @@ class GameGUI {open
           }
         }
         Fl_Group GameX01Options {
-          label {X01 Options} open
-          xywh {0 0 1600 900} color 8 labeltype NO_LABEL
+          label {X01 Options}
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
         } {
           Fl_Box {} {
             image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
@@ -591,7 +591,7 @@ class GameGUI {open
             }
             Fl_Button GameCancelNo {
               label {&No}
-              xywh {1190 770 160 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 55
+              xywh {1190 770 160 80} box FLAT_BOX shortcut 0xff1b color 59 selection_color 60 labelsize 50 labelcolor 55
             }
             Fl_Button GameCancelYes {
               label {&Yes}
@@ -600,7 +600,7 @@ class GameGUI {open
           }
         }
         Fl_Group GameQuit {
-          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL
         } {
           Fl_Box {} {
             image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
@@ -617,7 +617,7 @@ class GameGUI {open
             }
             Fl_Button GameQuitNo {
               label {&No}
-              xywh {1190 770 160 80} box FLAT_BOX color 59 selection_color 60 labelsize 50 labelcolor 55
+              xywh {1190 770 160 80} box FLAT_BOX shortcut 0xff1b color 59 selection_color 60 labelsize 50 labelcolor 55
             }
             Fl_Button GameQuitYes {
               label {&Yes}
