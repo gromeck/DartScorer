@@ -19,7 +19,7 @@ DartScorer :dart: supports:
 - X01 with different options (set/leg based, double/straight out)
 - a simple player management
 - audio caller voice (different audio packages available)
-- score input via keyboard or bluetooth number keypad -- with unlimited undo
+- score input via keyboard or bluetooth number keypad -- with unlimited undo and redo
 - checkout proposals
 - display during gameplay as you know it from TV
 - translated frontend (translaters for other languages than EN and DE are welcome)
