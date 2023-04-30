@@ -67,7 +67,45 @@ or simple install DartScorer :dart: by issuing
 sudo make install
 ```
 
-In a free-desktop compatible environment DarScorer will appear in the category of Games.
+In a free-desktop compatible environment DartScorer :dart: will appear in the category of Games.
+
+
+# Scores input via keypad
+
+I recommend a bluetooth keypad to use for manual score input. DartScorer :dart: supports
+two different layouts which only differ in PC- or phone-like ordering of the numbers (0 to 9).
+
+An unmodified keypad looks like this:
+
+<div style="float:left;">
+<img src="Hardware/Keypad/Keypad-Original.png" height="300px">
+</div>
+
+
+Get some white-on-black tape for our labeling machine and make it look like this:
+
+<div style="float:left;">
+<img src="Hardware/Keypad/Keypad-Modified-PC.png" height="300px">
+</div>
+
+
+Here is my keypad:
+
+<div style="float:left;">
+<img src="Hardware/Keypad/Keypad-Example.jpg" height="300px">
+</div>
+
+| Keypad Key | X11 Symbolic Name | DartScorer :dart: Function |
+| ---------- |------------------ | -------------------------- |
+| 0          | XK_KP_0           | 0                          |
+| :          | :                 | :                          |
+| 9          | XK_KP_9           | 9                          |
+| .          | XK_KP_Seperator   | Content Cell               |
+| Enter      | XK_KP_Enter       | Single                     |
+| +          | XK_KP_Add         | Double                     |
+| -          | XK_KP_Subtract    | Tripple                    |
+| *          | XK_KP_Multiply    | Redo                       |
+| Backspace  | XK_Backspace      | Undo                       |
 
 
 # Some more Screenshots
