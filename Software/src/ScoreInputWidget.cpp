@@ -56,6 +56,13 @@ void ScoreInputWidget::callbackOnScoreUndo(bool (*handler)(void *data),void *dat
 	this->data = data;
 }
 
+void ScoreInputWidget::callbackOnScoreRedo(bool (*handler)(void *data),void *data)
+{
+	LOG_DEBUG("handler=%s  data=%s",PTR2STR(handler),PTR2STR(data));
+	this->triggerOnScoreRedo = handler;
+	this->data = data;
+}
+
 /*
 **	handle the raw input of keys
 */
@@ -104,10 +111,10 @@ bool ScoreInputWidget::scoreInputRaw(int key)
 		case 't':
 		case XK_KP_Subtract:	return scoreInput(ScoreKeypadTripple);
 
-		case 'c':
-		case XK_BackSpace:		return scoreInput(ScoreKeypadClear);
+		case 'r':
+		case XK_KP_Multiply:	return scoreInput(ScoreKeypadRedo);
 		case 'u':
-		case XK_KP_Multiply:	return scoreInput(ScoreKeypadUndo);
+		case XK_BackSpace:		return scoreInput(ScoreKeypadUndo);
 	}
 	return false;
 }
@@ -162,7 +169,12 @@ bool ScoreInputWidget::scoreInput(int key)
 					}
 					break;
 				case ScoreKeypadUndo:
-					if (triggerOnScoreUndo) {
+					if (value > 0) {
+						// there is already some input, undo will clear this first
+						// before really undoing points
+						clear();
+					}
+					else if (triggerOnScoreUndo) {
 						if ((*triggerOnScoreUndo)(data))
 							clear();
 						else
@@ -170,8 +182,13 @@ bool ScoreInputWidget::scoreInput(int key)
 					}
 					break;
 				default:
-				case ScoreKeypadClear:
-					clear();
+				case ScoreKeypadRedo:
+					if (triggerOnScoreRedo) {
+						if ((*triggerOnScoreRedo)(data))
+							clear();
+						else
+							setError();
+					}
 					break;
 			}
 			value = -1;
@@ -232,15 +249,25 @@ bool ScoreInputWidget::scoreInput(int key)
 				factor = Points::TrippleFactor;
 				break;
 			case ScoreKeypadUndo:
-				if (triggerOnScoreUndo) {
+				if (value > 0 || factor >= Points::DoubleFactor) {
+					// there is already some input, undo will clear this first
+					// before really undoing points
+					clear();
+				}
+				else if (triggerOnScoreUndo) {
 					if ((*triggerOnScoreUndo)(data))
 						clear();
 					else
 						setError();
 				}
 				break;
-			case ScoreKeypadClear:
-				clear();
+			case ScoreKeypadRedo:
+				if (triggerOnScoreRedo) {
+					if ((*triggerOnScoreRedo)(data))
+						clear();
+					else
+						setError();
+				}
 				break;
 		}
 		setText();

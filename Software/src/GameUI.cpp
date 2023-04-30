@@ -58,6 +58,7 @@ GameUI::GameUI(bool fullscreen,bool autoplay)
 	GameOnOptions->callback((Fl_Callback *) gameOnOptionsButtonPressed,this);
 	ScoreInput->callbackOnScoreInput((bool (*)(void*, Points&)) triggerOnScoreInput,this);
 	ScoreInput->callbackOnScoreUndo((bool (*)(void*)) triggerOnScoreUndo,this);
+	ScoreInput->callbackOnScoreRedo((bool (*)(void*)) triggerOnScoreRedo,this);
 
 	GameCancelNo->callback((Fl_Callback *) gameCancelNoButtonPressed,this);
 	GameCancelYes->callback((Fl_Callback *) gameCancelYesButtonPressed,this);
@@ -567,7 +568,7 @@ void GameUI::optionsBackButtonPressed(Fl_Widget *widget,GameUI *ui)
 	if (ui->gameX01Widget) {
 		// ensure to do a full redraw because the options may changed the display
 		ui->gameX01Widget->forceRedraw();
-		ui->ScoreHistory->setValue(ui->pointsQueue.toString().c_str());
+		ui->ScoreHistory->setValue(ui->pointsQueue.toString(),ui->pointsQueueUndone.toStringReverse());
 	}
 }
 
@@ -584,7 +585,8 @@ void GameUI::startGame(void)
 	**	clear the score queue
 	*/
 	pointsQueue.clear();
-	ScoreHistory->setValue(this->pointsQueue.toString().c_str());
+	pointsQueueUndone.clear();
+	ScoreHistory->setValue(this->pointsQueue.toString(),this->pointsQueueUndone.toStringReverse());
 
 	/*
 	**	create the widget
@@ -627,6 +629,34 @@ void GameUI::startGame(void)
 	Wizard->value(GameOn);
 }
 
+bool GameUI::replayGame(void)
+{
+	/*
+	**	it might be the case, that the players did an undo
+	**	where we already thought it is the end of the game,
+	**	so undoing the last dart has to reopen the right buttons
+	*/
+	GameOnCancel->show();
+	GameOnExit->hide();
+	GameOnRestart->hide();
+
+	if (gameX01Widget) {
+		/*
+		**	replay the game with all the points from the queue
+		*/
+		gameX01Widget->startReplay();
+		for (int n = 0;n < pointsQueue.length();n++) {
+			Points points;
+
+			pointsQueue.nth(n,&points);
+			gameX01Widget->scoreInput(points);
+		}
+		gameX01Widget->stopReplay();
+		return true;
+	}
+	return false;
+}
+
 bool GameUI::triggerOnScoreInput(GameUI *ui,Points& points)
 {
 	LOG_DEBUG("ui=%s  points=%s",PTR2STR(ui),points.toString());
@@ -636,7 +666,8 @@ bool GameUI::triggerOnScoreInput(GameUI *ui,Points& points)
 		**	the game accepted the scoring
 		*/
 		ui->pointsQueue.push(points);
-		ui->ScoreHistory->setValue(ui->pointsQueue.toString().c_str());
+		ui->pointsQueueUndone.clear();
+		ui->ScoreHistory->setValue(ui->pointsQueue.toString(),ui->pointsQueueUndone.toStringReverse());
 		return true;
 	}
 	return false;
@@ -647,34 +678,35 @@ bool GameUI::triggerOnScoreUndo(GameUI *ui)
 	LOG_DEBUG("-");
 
 	/*
-	**	pop the last element
+	**	pop the last element -- and push it into the queue of undones
 	*/
-	ui->pointsQueue.pop();
-	ui->ScoreHistory->setValue(ui->pointsQueue.toString().c_str());
+	Points undone;
+
+	if (ui->pointsQueue.pop(&undone)) {
+		ui->pointsQueueUndone.push(undone);
+		ui->ScoreHistory->setValue(ui->pointsQueue.toString(),ui->pointsQueueUndone.toStringReverse());
+
+		return ui->replayGame();
+	}
+	return false;
+}
+
+bool GameUI::triggerOnScoreRedo(GameUI *ui)
+{
+	LOG_DEBUG("-");
 
 	/*
-	**	it might be the case, that the players did an undo
-	**	where we already thought it is the end of the game,
-	**	so undoing the last dart has to reopen the right buttons
+	**	pop the last element -- and push it into the queue of undones
 	*/
-	ui->GameOnCancel->show();
-	ui->GameOnExit->hide();
-	ui->GameOnRestart->hide();
+	Points undone;
 
-	if (ui->gameX01Widget) {
-		/*
-		**	replay the game with all points -- except the undone
-		*/
-		ui->gameX01Widget->startReplay();
-		for (int n = 0;n < ui->pointsQueue.length();n++) {
-			Points points;
+	if (ui->pointsQueueUndone.pop(&undone)) {
+		ui->pointsQueue.push(undone);
+		ui->ScoreHistory->setValue(ui->pointsQueue.toString(),ui->pointsQueueUndone.toStringReverse());
 
-			ui->pointsQueue.nth(n,&points);
-			ui->gameX01Widget->scoreInput(points);
-		}
-		ui->gameX01Widget->stopReplay();
+		return ui->replayGame();
 	}
-	return true;
+	return false;
 }
 
 void GameUI::triggerOnGameOver(GameUI *widget)

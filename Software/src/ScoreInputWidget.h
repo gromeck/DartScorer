@@ -56,7 +56,7 @@ class ScoreInputWidget : public Fl_Box
 		static const int ScoreKeypadSingle = -1;
 		static const int ScoreKeypadDouble = -2;
 		static const int ScoreKeypadTripple = -3;
-		static const int ScoreKeypadClear = -4;
+		static const int ScoreKeypadRedo = -4;
 		static const int ScoreKeypadUndo = -5;
 
 		bool scoreInputRaw(int key);
@@ -66,6 +66,7 @@ class ScoreInputWidget : public Fl_Box
 
 		bool (*triggerOnScoreInput)(void *data,Points& points) = NULL;
 		bool (*triggerOnScoreUndo)(void *data) = NULL;
+		bool (*triggerOnScoreRedo)(void *data) = NULL;
 
 		void setText(void);
 
@@ -75,6 +76,7 @@ class ScoreInputWidget : public Fl_Box
 
 		void callbackOnScoreInput(bool (*handler)(void *data,Points& points),void *data);
 		void callbackOnScoreUndo(bool (*handler)(void *data),void *data);
+		void callbackOnScoreRedo(bool (*handler)(void *data),void *data);
 
 		void clear(void);
 		void setError(void);

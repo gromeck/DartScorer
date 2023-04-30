@@ -41,6 +41,7 @@ class GameUI : public GameGUI
 		**	the queue of points
 		*/
 		PointsQueue pointsQueue;
+		PointsQueue pointsQueueUndone;
 
 		/*
 		**	page to return if user decides not to exit
@@ -68,6 +69,7 @@ class GameUI : public GameGUI
 		void returnToLastPage(void);
 
 		void startGame(void);
+		bool replayGame(void);
 		void stopGame(void);
 
 		void autoplayPlay(void);
@@ -115,6 +117,7 @@ class GameUI : public GameGUI
 		static void triggerOnGameOver(GameUI *ui);
 		static bool triggerOnScoreInput(GameUI *ui,Points& points);
 		static bool triggerOnScoreUndo(GameUI *ui);
+		static bool triggerOnScoreRedo(GameUI *ui);
 
 		static void playerListAllEntryClicked(Fl_Widget *widget,GameUI *ui);
 		static void playerListSelectedEntryClicked(Fl_Widget *widget,GameUI *ui);

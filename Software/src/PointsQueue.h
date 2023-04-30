@@ -52,6 +52,9 @@ class PointsQueue
 
 		std::string toString(void) { return toString(Points::SeparatorWide); };
 		std::string toString(std::string separator);
+
+		std::string toStringReverse(void) { return toStringReverse(Points::SeparatorWide); };
+		std::string toStringReverse(std::string separator);
 };
 
 #endif

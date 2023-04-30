@@ -102,6 +102,20 @@ std::string PointsQueue::toString(std::string separator)
 	return history;
 }
 
+std::string PointsQueue::toStringReverse(std::string separator)
+{
+	LOG_DEBUG("separator=%s",separator);
+
+	std::string history = "";
+
+	for (int n = ((int) queue.size() > QueueStringLimit) ? QueueStringLimit : queue.size() - 1;n >= 0;n--) {
+		history += queue[n].toString();
+		if (n > 0)
+			history += separator;
+	}
+	return history;
+}
+
 PointsQueue::~PointsQueue()
 {
 	LOG_DEBUG("-");

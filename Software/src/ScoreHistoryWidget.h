@@ -31,10 +31,11 @@ class ScoreHistoryWidget : public Fl_Box
 		ScoreHistoryWidget(int x,int y,int w,int h);
 		~ScoreHistoryWidget();
 
-		void setValue(const char *value);
+		void setValue(std::string done,std::string undone);
 
 	private:
-		char value[100];
+		std::string done;
+		std::string undone;
 
 		void draw(void);
 };
