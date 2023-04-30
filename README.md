@@ -67,7 +67,33 @@ or simple install DartScorer :dart: by issuing
 sudo make install
 ```
 
-In a free-desktop compatible environment DarScorer will appear in the category of Games.
+In a free-desktop compatible environment DartScorer :dart: will appear in the category of Games.
+
+
+# Input scores via Keypad
+
+I recommend a bluetooth keypad to use for manual score input. DartScorer :dart: supports
+two different layouts which only differ in PC- or phone-like ordering of the numbers (0 to 9).
+
+An unmodified keypad looks like this:
+
+<div style="float:left;">
+<img src="Hardware/Keypad/Keypad-Original.png" height="300px">
+</div>
+
+
+Get some white-on-black tape for our labeling machine and make it look like this:
+
+<div style="float:left;">
+<img src="Hardware/Keypad/Keypad-Modified-PC.png" height="300px">
+</div>
+
+
+Here is my keypad:
+
+<div style="float:left;">
+<img src="Hardware/Keypad/Keypad-Example.jpg" height="300px">
+</div>
 
 
 # Some more Screenshots
