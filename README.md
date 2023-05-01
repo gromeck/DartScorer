@@ -70,7 +70,7 @@ sudo make install
 In a free-desktop compatible environment DartScorer :dart: will appear in the category of Games.
 
 
-# Scores input via keypad
+# Score input via keypad
 
 I recommend a bluetooth keypad to use for manual score input. DartScorer :dart: supports
 two different layouts which only differ in PC- or phone-like ordering of the numbers (0 to 9).
