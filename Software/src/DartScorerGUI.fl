@@ -218,8 +218,7 @@ setFactor(1);} {}
   Function {triggerPoints(int factor,int value)} {open return_type {virtual void}
   } {
     code {int points = factor * value;
-LOG_DEBUG("triggerPoints(%d,%d) called: points=%d",factor,value,points);} {selected
-    }
+LOG_DEBUG("triggerPoints(%d,%d) called: points=%d",factor,value,points);} {}
   }
 }
 
@@ -329,7 +328,7 @@ class GameGUI {open
   } {
     Fl_Window window {
       label DartBoard open
-      xywh {107 56 1600 900} type Double color 30 labelsize 40 labelcolor 255 align 80 when 0 hide resizable hotspot size_range {1200 900 4000 3000}
+      xywh {107 56 1600 900} type Double color 30 labelsize 40 labelcolor 255 align 80 when 0 resizable hotspot size_range {1200 900 4000 3000} visible
     } {
       Fl_Wizard Wizard {open
         xywh {0 0 1610 911} box NO_BOX color 8
@@ -468,7 +467,7 @@ class GameGUI {open
         }
         Fl_Group GameX01Options {
           label {X01 Options}
-          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL
         } {
           Fl_Box {} {
             image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
@@ -481,12 +480,12 @@ class GameGUI {open
             xywh {50 130 1500 640} resizable
           } {
             Fl_Choice PointsToLeg {
-              label Points
-              xywh {500 300 600 100} box THIN_UP_BOX down_box BORDER_BOX color 30 labelsize 50 labelcolor 55 align 5 textfont 1 textsize 60
+              label Points selected
+              xywh {450 300 700 100} box THIN_UP_BOX down_box BORDER_BOX color 30 labelsize 50 labelcolor 55 align 5 textfont 1 textsize 60
             } {}
             Fl_Round_Button DoubleOut {
               label {Double Out}
-              xywh {500 440 280 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
+              xywh {450 440 280 80} type Radio down_box ROUND_DOWN_BOX labelsize 50 labelcolor 55
             }
             Fl_Round_Button StraightOut {
               label {Straight Out}
@@ -494,11 +493,11 @@ class GameGUI {open
             }
             Fl_Counter LegsToSet {
               label {Legs To Set}
-              xywh {500 600 280 100} type Simple color 33 selection_color 34 labelsize 50 labelcolor 55 align 5 minimum 2 maximum 20 step 1 value 2 textsize 60
+              xywh {450 600 330 100} type Simple color 33 selection_color 34 labelsize 50 labelcolor 55 align 5 minimum 2 maximum 20 step 1 value 2 textsize 60
             }
             Fl_Counter SetsToWin {
               label {Sets To Win}
-              xywh {820 600 280 100} type Simple color 33 selection_color 34 labelsize 50 labelcolor 55 align 5 minimum 1 maximum 10 step 1 value 2 textsize 60
+              xywh {820 600 330 100} type Simple color 33 selection_color 34 labelsize 50 labelcolor 55 align 5 minimum 1 maximum 10 step 1 value 2 textsize 60
             }
           }
           Fl_Group {} {open
@@ -600,7 +599,7 @@ class GameGUI {open
           }
         }
         Fl_Group GameQuit {
-          xywh {0 0 1600 900} color 8 labeltype NO_LABEL
+          xywh {0 0 1600 900} color 8 labeltype NO_LABEL hide
         } {
           Fl_Box {} {
             image {../images/logo/DartScorer-Logo-white-height=50px.png} xywh {10 10 150 50} align 21
