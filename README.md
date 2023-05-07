@@ -95,17 +95,83 @@ Here is my keypad:
 <img src="Hardware/Keypad/Keypad-Example.jpg" height="300px">
 </div>
 
-| Keypad Key | X11 Symbolic Name | DartScorer :dart: Function |
-| ---------- |------------------ | -------------------------- |
-| 0          | XK_KP_0           | 0                          |
-| :          | :                 | :                          |
-| 9          | XK_KP_9           | 9                          |
-| .          | XK_KP_Seperator   | Content Cell               |
-| Enter      | XK_KP_Enter       | Single                     |
-| +          | XK_KP_Add         | Double                     |
-| -          | XK_KP_Subtract    | Tripple                    |
-| *          | XK_KP_Multiply    | Redo                       |
-| Backspace  | XK_Backspace      | Undo                       |
+| Keypad Key  | Alternative Input | DartScorer :dart: Function |
+| ----------- | ----------------- | -------------------------- |
+| `0`         | `0`               | `0`                        |
+| :           | :                 | :                          |
+| `9`         | `9`               | `9`                        |
+| `.`         | `b`               | `Bull`                     |
+| `Enter`     | `s`               | `Sx` (Single)              |
+| `+`         | `d`               | `Dx` (Double)              |
+| `-`         | `t`               | `Tx` (Tripple)             |
+| `*`         | `r`               | `Redo`                     |
+| `Backspace` | `u`               | `Undo`                     |
+
+
+DartScorer :dart: also offers two modes to enter the score.
+
+The current input is show in the rightmost field at the screen bottom.
+
+In general it was the goal to enter the score with as less key strokes
+as possible.
+
+## Score Input Mode `T..2..0`
+
+In this input mode you enter the score as it is normally spoken,
+first the factor (single, double, tripple), then the digits.
+The single can be omitted. Bulls Eye is entered as `Dx`...`Bull`.
+
+**Note:** in case of a score of 1 or 2 you enter `1` or respectivly `2`,
+but DartScorer :dart: will wait for another digit (score could be
+1 or 10 to 19 respectivly 2 or 20).
+
+You have to hit `Sx` or wait for two seconds to close the input of
+these scores.
+The same is true for D1, D2, T1 and T2.
+
+
+
+See the table below for examples.
+
+
+## Score Input Mode `2..0..T`
+
+In this input order you enter the score in the order digits, followed
+by the factor (single, double, tripple).
+Bulls Eye is entered as `Bull`...`Dx`.
+
+See the table below for examples.
+
+
+## Comparison and Examples
+
+| Score        | Input Sequence for `T..2..0` | Input Sequence for `2..0..T` |
+| ------------ | ---------------------------- | ---------------------------- |
+| 0            | `0`                          | `0` ... `Sx`                 |
+| **Singles**                                                                |
+| 1            | `1` ... `Sx`                 | `1` ... `Sx`                 |
+| 2            | `2` ... `Sx`                 | `1` ... `Sx`                 |
+| 3            | `3`                          | `1` ... `Sx`                 |
+| :            | :                            | :                            |
+| 9            | `9`                          | `9` ... `Sx`                 |
+| 10           | `1` ... `0`                  | `1` ... `0` ... `Sx`         |
+| :            | :                            | :                            |
+| 19           | `1` ... `9`                  | `1` ... `9` ... `Sx`         |
+| 20           | `2` ... `0`                  | `2` ... `0` ... `Sx`         |
+| **Doubles**                                                                |
+| D1           | `Dx` ... `1` ... `Sx`        | `1` ... `Dx`                 |
+| D2           | `Dx` ... `2` ... `Sx`        | `2` ... `Dx`                 |
+| D3           | `Dx` ... `3`                 | `3` ... `Dx`                 |
+| :            | :                            | :                            |
+| D9           | `Dx` ... `9`                 | `9` ... `Dx`                 |
+| D10          | `Dx` ... `1` ... `0`         | `1` ... `0` ... `Dx`         |
+| :            | :                            | :                            |
+| D19          | `Dx` ... `1` ... `9`         | `1` ... `9` ... `Dx`         |
+| D20          | `Dx` ... `2` ... `0`         | `2` ... `0` ... `Dx`         |
+| **Tripples** | analog                                                      |
+| Bull         | `Bull`                       |`Bull` ... `Sx`               |
+| Bulls Eye    | `Dx` ... `Bull`              |`Bull` ... `Dx`               |
+
 
 
 # Some more Screenshots
