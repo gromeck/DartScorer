@@ -55,8 +55,8 @@ bool DartScorer::setFullscreen(void)
 
 void DartScorer::loadFonts(void)
 {
-	Fl::set_font(FL_HELVETICA,"Roboto Condensed");
-	Fl::set_font(FL_HELVETICA_BOLD,"BRoboto Condensed");
+	Fl::set_font(FL_HELVETICA,"Liberation Sans Narrow");
+	Fl::set_font(FL_HELVETICA_BOLD,"BLiberation Sans Narrow");
 }
 
 int DartScorer::handleEvents(int event)
