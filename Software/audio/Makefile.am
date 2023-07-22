@@ -22,11 +22,12 @@
 #
 
 
-install-exec-hook:
-	$(mkinstalldirs) $(datarootdir)/$(PACKAGE)/voice
+install-data-am:
+	$(mkinstalldirs) $(DESTDIR)$(datarootdir)/$(PACKAGE)/voice
 	@for DIR in *; do \
 		if test -f $$DIR/game-on.wav ; then \
-			echo "Installing voice $$DIR in $(datarootdir)/$(PACKAGE)/voice/" ; \
-			cp --recursive --dereference $$DIR $(datarootdir)/$(PACKAGE)/voice/ ; \
+			echo "Installing voice $$DIR in $(DESTDIR)$(datarootdir)/$(PACKAGE)/voice/" ; \
+			$(mkinstalldirs) $(DESTDIR)$(datarootdir)/$(PACKAGE)/voice/$$DIR ; \
+			$(install_sh) -m 0644 $$DIR/* $(DESTDIR)$(datarootdir)/$(PACKAGE)/voice/$$DIR ; \
 		fi ; \
 	done

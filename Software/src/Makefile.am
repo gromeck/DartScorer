@@ -58,3 +58,6 @@ CLEANFILES =  DartScorerGUI.cpp DartScorerGUI.h
 AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -DDATADIR=\"$(datarootdir)/$(PACKAGE)/\"
 DartScorer_LDADD= @LIBINTL@
 
+install-exec-am:
+	$(mkinstalldirs) $(DESTDIR)$(prefix)/games
+	$(install_sh) $(bin_PROGRAMS) $(DESTDIR)$(prefix)/games

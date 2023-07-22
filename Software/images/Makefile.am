@@ -22,9 +22,9 @@
 #
 
 
-install-exec-hook:
-	$(mkinstalldirs) $(datarootdir)/$(PACKAGE)
-	cp --dereference background/background.jpg $(datarootdir)/$(PACKAGE)/
-	cp --dereference logo/DartScorer-Logo-black.svg $(datarootdir)/$(PACKAGE)/logo-black.svg
-	cp --dereference logo/DartScorer-Logo-white.svg $(datarootdir)/$(PACKAGE)/logo-white.svg
-	cp --dereference logo/DartScorer-Logo-Icon.svg $(datarootdir)/$(PACKAGE)/icon.svg
+install-data-am:
+	$(mkinstalldirs) $(DESTDIR)$(datarootdir)/$(PACKAGE)
+	$(install_sh) -m 0644 background/background.jpg $(DESTDIR)$(datarootdir)/$(PACKAGE)/
+	$(install_sh) -m 0644 logo/DartScorer-Logo-black.svg $(DESTDIR)$(datarootdir)/$(PACKAGE)/logo-black.svg
+	$(install_sh) -m 0644 logo/DartScorer-Logo-white.svg $(DESTDIR)$(datarootdir)/$(PACKAGE)/logo-white.svg
+	$(install_sh) -m 0644 logo/DartScorer-Logo-Icon.svg $(DESTDIR)$(datarootdir)/$(PACKAGE)/icon.svg

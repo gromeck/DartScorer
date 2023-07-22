@@ -22,5 +22,6 @@
 #
 
 
-install-exec-hook:
-	@cp DartScorer.desktop /usr/share/applications/
+install-data-am:
+	$(mkinstalldirs) $(DESTDIR)$(datarootdir)/applications
+	$(install_sh) DartScorer.desktop $(DESTDIR)$(datarootdir)/applications/
