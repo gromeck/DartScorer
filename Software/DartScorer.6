@@ -1,0 +1,69 @@
+.TH man 6 "22 July 2023" "0.2" "DartScorer man page"
+.SH NAME
+DartScorer \- Yet another application to manage the game of Steel Dart
+
+.SH SYNOPSIS
+.B DartScorer
+[(\-V|\-\-version)] [(\-?|\-\-help)] [(\-v|\-\-verbose)] [(\-f|\-\-fullscreen)] [(\-a|\-\-autoplay) <darts per second>] 
+
+.SH DESCRIPTION
+.TP 8
+.B \-V
+.TP 8
+.B \-\-version
+print version number an exit
+.TP 8
+.B \-?
+.TP 8
+.B \-\-help
+show this help
+.TP 8
+.B \-v
+.TP 8
+.B \-\-verbose
+be more verbose, repeating the option increases the verbosity level.
+.TP 8
+.B \-f
+.TP 8
+.B \-\-fullscreen
+open the GUI in fullscreen mode
+.TP 8
+.B \-a <darts per second>
+.TP 8
+.B \-\-autoplay <darts per second>
+run in autoplay mode -- useful for regression testing <darts per second> specifies the speed in darts per second,
+where 0 means to disable the autoplay feature.
+
+.TP 8
+DartScorer supports:
+.TP 8
+.B \- X01 with different options (set/leg based, double/straight out)
+.TP 8
+.B \- a simple player management
+.TP 8
+.B \- audio caller voice (different audio packages available -- visit https://github.com/gromeck/DartScorer-Voices)
+.TP 8
+.B \- score input via keyboard or bluetooth number keypad -- with unlimited undo and redo
+.TP 8
+.B \- checkout proposals
+.TP 8
+.B \- display during gameplay as you know it from TV
+.TP 8
+.B \- translated frontend (translaters for other languages than EN and DE are welcome)
+.TP 8
+.B \- simple statistics (average, high scores & finishes, ...)
+
+.SH EXAMPLES
+-
+
+.SH SEE ALSO
+-
+
+.SH BUGS
+Non so far.
+
+.SH AUTHOR
+Christian Lorenz <gromeck@gromeck.de>
+
+.SH COPYRIGHT
+This software is licensed under the GNU General Public License, see <https://www.gnu.org/licenses/>

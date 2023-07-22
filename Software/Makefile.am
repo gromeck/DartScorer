@@ -26,3 +26,10 @@ SUBDIRS= src po images audio etc
 ACLOCAL_AMFLAGS = -I m4
 
 EXTRA_DIST = m4/ChangeLog
+
+%.6.gz: %.6
+	gzip <$< >$@
+
+install-data-am: DartScorer.6.gz
+	$(mkinstalldirs) $(DESTDIR)$(datarootdir)/man/man6
+	$(install_sh) -m 0644 $< $(DESTDIR)$(datarootdir)/man/man6/
