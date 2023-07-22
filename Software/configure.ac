@@ -7,6 +7,7 @@
 #
 
 AC_INIT([DartScorer], m4_esyscmd([ tr "\n" "-" <VERSION ; git describe --tags --always --dirty | tr -d "\n" ]) )
+AC_PREFIX_DEFAULT(/usr)
 AC_CONFIG_SRCDIR([.])
 AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER(config.h)
