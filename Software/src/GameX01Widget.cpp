@@ -42,7 +42,7 @@ GameX01Widget::GameX01Widget(int x01,int legsToSet,int setsToWin,bool doubleOut,
 
 	statistics.clear();
 
-	background = new Fl_JPEG_Image(DATADIR "background.jpg");
+	background = new Fl_JPEG_Image(DATADIR "images/background.jpg");
 
 	print();
 }

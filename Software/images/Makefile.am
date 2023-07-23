@@ -21,10 +21,11 @@
 #
 #
 
+IMAGESDIR=$(DESTDIR)$(datarootdir)/$(PACKAGE)/images
 
 install-data-am:
-	$(mkinstalldirs) $(DESTDIR)$(datarootdir)/$(PACKAGE)
-	$(install_sh) -m 0644 background/background.jpg $(DESTDIR)$(datarootdir)/$(PACKAGE)/
-	$(install_sh) -m 0644 logo/DartScorer-Logo-black.svg $(DESTDIR)$(datarootdir)/$(PACKAGE)/logo-black.svg
-	$(install_sh) -m 0644 logo/DartScorer-Logo-white.svg $(DESTDIR)$(datarootdir)/$(PACKAGE)/logo-white.svg
-	$(install_sh) -m 0644 logo/DartScorer-Logo-Icon.svg $(DESTDIR)$(datarootdir)/$(PACKAGE)/icon.svg
+	$(mkinstalldirs) $(IMAGESDIR)
+	$(install_sh) -m 0644 background/background.jpg $(IMAGESDIR)
+	$(install_sh) -m 0644 logo/DartScorer-Logo-black.svg $(IMAGESDIR)/logo-black.svg
+	$(install_sh) -m 0644 logo/DartScorer-Logo-white.svg $(IMAGESDIR)/logo-white.svg
+	$(install_sh) -m 0644 logo/DartScorer-Logo-Icon.svg $(IMAGESDIR)/icon.svg
