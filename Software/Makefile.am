@@ -21,7 +21,7 @@
 #
 #
 
-SUBDIRS= src po images audio etc
+SUBDIRS= src po images voices etc
 
 ACLOCAL_AMFLAGS = -I m4
 

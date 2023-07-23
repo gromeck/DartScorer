@@ -47,5 +47,5 @@ fi
 #
 #	find all Makefiles
 #
-AC_CONFIG_FILES([ Makefile src/Makefile po/Makefile.in images/Makefile audio/Makefile etc/Makefile ])
+AC_CONFIG_FILES([ Makefile src/Makefile po/Makefile.in images/Makefile voices/Makefile etc/Makefile ])
 AC_OUTPUT
