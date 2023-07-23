@@ -30,7 +30,7 @@ Voice::Voice()
 	**	construct the base path
 	*/
 	Poco::Path path(DATADIR);
-	path.pushDirectory("voice");
+	path.pushDirectory("voices");
 	baseDir = path.toString();
 
 	/*
