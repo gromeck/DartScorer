@@ -117,7 +117,7 @@ Build-Depends: debhelper (>= 9)
 
 Package: ${PACKAGE}
 Architecture: any
-Depends: \${shlibs:Depends}, \${misc:Depends}
+Depends: \${shlibs:Depends}, \${misc:Depends}, fonts-liberation
 Description: Yet another application to manage the game of Steel Dart
  DartScorer offers multiplayer X01, simple score input,
  audio caller support, checkout hints, ...
