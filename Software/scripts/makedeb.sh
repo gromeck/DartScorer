@@ -58,7 +58,7 @@ tar xzf ${PACKAGE}_${VERSION}.orig.tar.gz
 #
 mkdir -p ${PACKAGE}-${VERSION}/debian/source
 cd ${PACKAGE}-${VERSION}
-rm debian/changelog
+rm -f debian/changelog
 debchange \
 	--create \
 	-v $VERSION \
