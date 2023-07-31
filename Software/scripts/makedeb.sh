@@ -8,6 +8,18 @@
 #
 
 #
+#	error handler
+#
+trap 'error_handler $? $LINENO' ERR
+
+error_handler()
+{
+    [ $IGNERR ] && return
+    echo "ERROR: ($1) occurred on line $2"
+    exit 1
+}
+
+#
 #	switch to the DartScorer directory in which we expect the Software directory
 #
 CWD=$PWD
