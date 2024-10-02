@@ -1,12 +1,11 @@
 # data file for the Fltk User Interface Designer (fluid)
-version 1.0305
+version 1.0308
 i18n_type 1
 i18n_include <libintl.h>
 i18n_function gettext
 header_name {.h}
 code_name {.cpp}
-class ScoreInputGUI {open
-} {
+class ScoreInputGUI {} {
   Function {ScoreInputGUI()} {open
   } {
     code {//LOG_DEBUG("-");
@@ -253,8 +252,7 @@ class BoardGUI {} {
   }
 }
 
-class PlayerManagementGUI {open
-} {
+class PlayerManagementGUI {} {
   Function {PlayerManagementGUI()} {open
   } {
     Fl_Window window {
@@ -295,8 +293,7 @@ class PlayerManagementGUI {open
   }
 }
 
-class PlayerManagementEditGUI {open
-} {
+class PlayerManagementEditGUI {} {
   Function {PlayerManagementEditGUI()} {open
   } {
     Fl_Window window {
@@ -327,8 +324,8 @@ class GameGUI {open
   Function {GameGUI()} {open
   } {
     Fl_Window window {
-      label DartBoard open
-      xywh {107 56 1600 900} type Double color 30 labelsize 40 labelcolor 255 align 80 when 0 resizable hotspot size_range {1200 900 4000 3000} visible
+      label DartBoard open selected
+      xywh {107 56 1600 900} type Double color 30 labelsize 40 labelcolor 255 align 80 when 0 resizable hotspot size_range {1024 768 8192 5120} visible
     } {
       Fl_Wizard Wizard {open
         xywh {0 0 1610 911} box NO_BOX color 8
@@ -480,7 +477,7 @@ class GameGUI {open
             xywh {50 130 1500 640} resizable
           } {
             Fl_Choice PointsToLeg {
-              label Points selected
+              label Points
               xywh {450 300 700 100} box THIN_UP_BOX down_box BORDER_BOX color 30 labelsize 50 labelcolor 55 align 5 textfont 1 textsize 60
             } {}
             Fl_Round_Button DoubleOut {
